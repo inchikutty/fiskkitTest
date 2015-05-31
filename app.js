@@ -1,7 +1,6 @@
 angular.module('fiskkitTest', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
 
 angular.module('fiskkitTest').config(function($stateProvider, $urlRouterProvider) {
-
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 

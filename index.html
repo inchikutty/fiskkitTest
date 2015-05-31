@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="fiskkitTest">
 <head>
-  <title></title>
+  <title>Fiskkit Test Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
   <link href="app.less" type="text/css" rel="stylesheet/less">
@@ -28,12 +28,22 @@
 
   <!-- Main App JS -->
   <script src="app.js"></script>
+  <script src="service/urlContent.js"></script>
   <!-- Add New Component JS Above -->
 
   <div>
     <div id="content" class="container">
       <div class="row">
         <div ui-view>
+			<div class="header">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<input id="url" type="text" class="form-control" ng-model= "urlContent.url" placeholder="Enter the URL" size = "80%" />
+						<input id="urlBtn" class="btn-primary" type="button" value="load web content" ng-click ="urlContent.result()" />
+					</div>
+				</form>
+			</div><br/>
+			<iframe class="well" id="ifid" width='100%' height="100%" src= "" ></iframe>
         </div>
       </div>
     </div>
